@@ -12,12 +12,13 @@
 #include "syringePump.h"
 
 extern volatile SemaphoreHandle_t timeOutSemaphore;
+extern SemaphoreHandle_t motorPauseSemaphore;
 
 //extern bool TimeOut;
 // define macro
 void timer_init();
 void timer_beginInject();
-void timer_stopInject(void);
+void timer_pauseInject(void);
 void timer_contInject(void);
 bool timer_doneInject(void);
 

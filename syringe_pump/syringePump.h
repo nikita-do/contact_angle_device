@@ -24,6 +24,7 @@ typedef enum {VOL_5UL=5, VOL_10UL=10} volume_t;
 
 extern uint32_t microsteps;
 extern uint32_t pulse_time_us;
+extern volume_t presetVolume;
 
 #ifdef __cplusplus
 extern "C" {

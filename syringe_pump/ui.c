@@ -21,26 +21,23 @@
 */
 void ui_initGPIO(void)
 {
-  pinMode (LED1_PIN, OUTPUT);
-  pinMode (LED2_PIN, OUTPUT);
-  pinMode (LED3_PIN, OUTPUT);
-  pinMode (LED4_PIN, OUTPUT);
+  pinMode (LED_START_PIN, OUTPUT);
+  pinMode (LED_STOP_PIN, OUTPUT);
+  pinMode (LED_5UL_PIN, OUTPUT);
+  pinMode (LED_10UL_PIN, OUTPUT);
   pinMode (BTN_PRESET_PIN, INPUT);
   pinMode (BTN_START_PIN, INPUT);
   pinMode (BTN_FWD_PIN, INPUT);
   pinMode (BTN_BWD_PIN, INPUT);
 }
 
-void ui_blinkLED(unsigned int ms){
+void ui_blinkLED(uint8_t led_pin, uint16_t ms){
   //private variables but stored in global scope
   static uint16_t cnt = 0, stateOfLED = LED_STATE1; 
   switch(stateOfLED){ 
     case LED_STATE1:
-    //turn LEDs off
-    digitalWrite(LED1_PIN, LOW);
-    digitalWrite(LED2_PIN, LOW);
-    digitalWrite(LED3_PIN, LOW);
-    digitalWrite(LED4_PIN, LOW);
+    //turn led off
+    digitalWrite(led_pin, LOW);
     delay(1);
     cnt++; //count the time until it equals the input delay duration
     if (cnt == ms){
@@ -48,45 +45,9 @@ void ui_blinkLED(unsigned int ms){
       stateOfLED = LED_STATE2;
     }
     break;
-    // unfinished code
+    //turn led on
     case LED_STATE2:
-    digitalWrite(LED1_PIN, HIGH);
-    digitalWrite(LED2_PIN, HIGH);
-    digitalWrite(LED3_PIN, HIGH);
-    digitalWrite(LED4_PIN, HIGH);
-    delay(1);
-    cnt++;
-    if (cnt == ms){
-      cnt = 0;
-      stateOfLED = LED_STATE1;
-    }
-    break;
-  }
-}
-
-void ui_alternateLED(unsigned int ms){
-  //private variables but stored in global scope
-  static uint16_t cnt = 0, stateOfLED = LED_STATE1; 
-  switch(stateOfLED){
-    case LED_STATE1:
-    //turn LEDs off
-    digitalWrite(LED1_PIN, LOW);
-    digitalWrite(LED2_PIN, HIGH);
-    digitalWrite(LED3_PIN, LOW);
-    digitalWrite(LED4_PIN, HIGH);
-    delay(1);
-    cnt++; //count the time until it equals the input delay duration
-    if (cnt == ms){
-      cnt = 0;
-      stateOfLED = LED_STATE2;
-    }
-    break;
-    // unfinished code
-    case LED_STATE2:
-    digitalWrite(LED1_PIN, HIGH);
-    digitalWrite(LED2_PIN, LOW);
-    digitalWrite(LED3_PIN, HIGH);
-    digitalWrite(LED4_PIN, LOW);
+    digitalWrite(led_pin, HIGH);
     delay(1);
     cnt++;
     if (cnt == ms){

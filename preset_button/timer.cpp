@@ -51,7 +51,7 @@ void timer_init()
   timer2 = timerBegin(2,80,true);   //1: timer 1, 80000: prescaler, true: count up
   timerStop(timer2);
   timerAttachInterrupt(timer2, &timeOutOnTimer2, true); //timer1: timer variable
-  timerAlarmWrite(timer2, 1200000, true); //3000: timer ticks, true: auto reload. Alarm time = 3000 x 1000/1MHz = 3s
+  timerAlarmWrite(timer2, 1500000, true); //3000: timer ticks, true: auto reload. Alarm time = 3000 x 1000/1MHz = 3s
   timerAlarmEnable(timer2); //Enable timer
 }
 /*

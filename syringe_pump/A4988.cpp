@@ -18,7 +18,6 @@
 *******************************************************************************/
 void A4988_initGPIO(void)
 {
-  // Setup
   pinMode(A4988_STEP_PIN,OUTPUT);
   pinMode(A4988_DIR_PIN,OUTPUT);
 }
