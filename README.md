@@ -8,7 +8,7 @@ Pump a droplet (5uL or 10uL) onto a flat surface.
   - 4 buttons and 4 LEDs
 
 ## State machine diagram 
-![diagram-SM diagram drawiosm](https://github.com/nikita-do/contact_angle_device/assets/160465263/4c3ceadf-6d5b-4a9e-807c-dcacc8ad43b5)
+![diagram-SM diagram drawio](https://github.com/nikita-do/contact_angle_device/assets/160465263/705f8ed6-6cab-477e-bcee-7d1eb885873b)
 
 ## Flow chart
-![diagram-Flow chart drawio](https://github.com/nikita-do/contact_angle_device/assets/160465263/6ca50cad-92d7-48d9-ab30-dec6823d830e)
+![diagram-Flow chart drawio](https://github.com/nikita-do/contact_angle_device/assets/160465263/2bc5fe3d-a3f3-4d5f-ad10-3ef6451bc9af)
