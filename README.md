@@ -12,4 +12,3 @@ Pump a droplet (5uL or 10uL) onto a flat surface.
 
 ## Flow chart
 ![diagram-Flow chart drawio](https://github.com/nikita-do/contact_angle_device/assets/160465263/2bc5fe3d-a3f3-4d5f-ad10-3ef6451bc9af)
-![IMAG0036](https://github.com/user-attachments/assets/86b07b53-bfc4-4a09-9038-6a6b82ede445)
